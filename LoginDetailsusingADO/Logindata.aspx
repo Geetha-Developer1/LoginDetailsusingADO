@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <table>
+            <table align="center">
                 <tr>
                     <td>
                         <asp:Label ID="lbluname" runat="server" Text="Username: "></asp:Label>
@@ -29,11 +29,38 @@
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td><asp:Button ID="btnupdate" runat="server" Text="Update" OnClick="btnupdate_Click" /></td>
                     <td>
                         <asp:Button ID="btnsubmit" runat="server" Text="Submit" OnClick="btnsubmit_Click" />
                     </td>
                 </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <asp:Button ID="btndelete" runat="server" Text="Delete" OnClick="btndelete_Click" />
+                    </td>
+                </tr>
+               
+            </table>
+            <table align="center">
+                <tr>
+                    <td>
+                       <asp:Label ID="lblsearch" runat="server" Text="Search"></asp:Label> 
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtsearch" runat="server" ></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><asp:Button ID="btnsearch" runat="server" Text="Search" OnClick="btnsearch_Click" /></td>
+                </tr>
+                 <tr>
+     <td></td>
+     <td>
+         <asp:GridView ID="gvdata" runat="server"></asp:GridView>
+     </td>
+ </tr>
             </table>
         </div>
     </form>

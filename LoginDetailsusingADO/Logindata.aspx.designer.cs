@@ -78,6 +78,15 @@ namespace LoginDetailsusingADO
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvpw;
 
         /// <summary>
+        /// btnupdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnupdate;
+
+        /// <summary>
         /// btnsubmit control.
         /// </summary>
         /// <remarks>
@@ -85,5 +94,50 @@ namespace LoginDetailsusingADO
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnsubmit;
+
+        /// <summary>
+        /// btndelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btndelete;
+
+        /// <summary>
+        /// lblsearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsearch;
+
+        /// <summary>
+        /// txtsearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtsearch;
+
+        /// <summary>
+        /// btnsearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnsearch;
+
+        /// <summary>
+        /// gvdata control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvdata;
     }
 }
