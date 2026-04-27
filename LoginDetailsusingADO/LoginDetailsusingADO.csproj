@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Logindata.aspx" />
     <Content Include="Regestration.aspx" />
+    <Content Include="StudentRegestrationform.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +87,13 @@
     </Compile>
     <Compile Include="Regestration.aspx.designer.cs">
       <DependentUpon>Regestration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegestrationform.aspx.cs">
+      <DependentUpon>StudentRegestrationform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentRegestrationform.aspx.designer.cs">
+      <DependentUpon>StudentRegestrationform.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

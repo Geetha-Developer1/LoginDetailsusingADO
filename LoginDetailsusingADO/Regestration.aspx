@@ -9,9 +9,9 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <table>
+            <table align="center">
                 <tr>
-                    <td>s
+                    <td>
                         <asp:Label ID="lbluname" runat="server" Text="Username: "></asp:Label>
                     </td>
                     <td>
