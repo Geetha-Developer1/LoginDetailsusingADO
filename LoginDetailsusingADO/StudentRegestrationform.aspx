@@ -34,10 +34,10 @@
                       <asp:Label ID="lblgender" runat="server" Text="Gender: "></asp:Label>   
                     </td>
                     <td>
-                        <asp:RadioButton ID="rbfemale" runat="server" Text="Female" GroupName="gender" AutoPostBack="true" />
-                        <asp:RadioButton ID="rbmale" runat="server" Text="Male" GroupName="gender" AutoPostBack="true"/>
-                        <asp:RadioButton ID="rbothers" runat="server" Text="Others" GroupName="gender" AutoPostBack="true" />
-                        <asp:CustomValidator ID="cvgender" runat="server" ErrorMessage="Please Select Your Gender" ForeColor="Red" OnServerValidate="cvgender_ServerValidate"></asp:CustomValidator>
+                        <asp:RadioButton ID="rbfemale" runat="server" Text="Female" GroupName="gender"  />
+                        <asp:RadioButton ID="rbmale" runat="server" Text="Male" GroupName="gender" />
+                        <asp:RadioButton ID="rbothers" runat="server" Text="Others" GroupName="gender"  />
+                        <asp:CustomValidator ID="cvgender" runat="server"   Display="Dynamic"  ValidateEmptyText="true" ErrorMessage="Please Select Your Gender" ForeColor="Red" OnServerValidate="cvgender_ServerValidate"></asp:CustomValidator>
                     </td>
                 </tr>
                 <tr>
@@ -50,7 +50,7 @@
                         <asp:CheckBox ID="chkmvc" runat="server" Text="MVC" AutoPostBack="true"/>
                         <asp:CheckBox ID="chkcore" runat="server" Text="DotNetCore" AutoPostBack="true"/>
                         <asp:CheckBox ID="chkangular" runat="server" Text="Angular" AutoPostBack="true"/>
-                        <asp:CustomValidator ID="cvcourse" runat="server" ErrorMessage="Please Select Your Courses" ForeColor="Red" OnServerValidate="cvcourse_ServerValidate"></asp:CustomValidator>
+                        <asp:CustomValidator ID="cvcourse" runat="server" ValidateEmptyText="true" ErrorMessage="Please Select Your Courses" ForeColor="Red" OnServerValidate="cvcourse_ServerValidate"></asp:CustomValidator>
                     </td>
                 </tr>
                 <tr>
@@ -110,7 +110,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="btnsubmit" runat="server" Text="Submit" OnClick="btnsubmit_Click" />
+                        <asp:Button ID="btnsubmit" runat="server" Text="Submit" OnClick="btnsubmit_Click" CausesValidation="true" />
                     </td>
                     <td>
                         <asp:Button ID="btndelete" runat="server" Text="Delete" OnClick="btndelete_Click"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

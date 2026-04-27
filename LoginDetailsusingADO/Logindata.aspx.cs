@@ -13,7 +13,8 @@ namespace LoginDetailsusingADO
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+                bindgrid();
         }
 
         protected void btnsubmit_Click(object sender, EventArgs e)
@@ -66,6 +67,53 @@ namespace LoginDetailsusingADO
             da.Fill (ds);
             gvdata.DataSource = ds;
             gvdata.DataBind ();
+        }
+
+        protected void gvdata_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvdata.PageIndex = e.NewPageIndex;
+            bindgrid();
+        }
+
+        protected void gvdata_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            gvdata.EditIndex= e.NewEditIndex;
+            bindgrid ();
+        }
+
+        protected void gvdata_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            gvdata.EditIndex = -1;
+            bindgrid();
+        }
+
+        protected void gvdata_RowUpdating1(object sender, GridViewUpdateEventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UA0O1ET\\SQLEXPRESS;Initial Catalog=ADODotNetDB;Integrated Security=true;");
+            con.Open();
+            GridViewRow gvr = gvdata.Rows[e.RowIndex];
+            int uid = Convert.ToInt32(gvdata.DataKeys[e.RowIndex].Value);
+            string username = ((TextBox)gvr.FindControl("txtu1name")).Text;
+            string password = ((TextBox)gvr.FindControl("txtpwd")).Text;
+            SqlCommand cmd = new SqlCommand("update logins set Username=@username,Password=@password where uid=@uid", con);
+            cmd.Parameters.AddWithValue("@Username", username);
+            cmd.Parameters.AddWithValue("@Password", password);
+            cmd.Parameters.AddWithValue("@uid", uid);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            bindgrid();
+        }
+        protected void gvdata_RowDeleting(object sender,GridViewDeleteEventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UA0O1ET\\SQLEXPRESS;Initial Catalog=ADODotNetDB;Integrated Security=true;");
+            con.Open();
+            GridViewRow gvr = gvdata.Rows[e.RowIndex];
+            int uid = Convert.ToInt32(gvdata.DataKeys[e.RowIndex].Value);
+            SqlCommand cmd = new SqlCommand("Delete from logins where uid=@uid", con);
+            cmd.Parameters.AddWithValue("@uid", uid);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            bindgrid();
         }
     }
 }

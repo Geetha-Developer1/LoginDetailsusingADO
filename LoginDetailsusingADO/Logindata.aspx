@@ -58,7 +58,37 @@
                  <tr>
      <td></td>
      <td>
-         <asp:GridView ID="gvdata" runat="server"></asp:GridView>
+         <asp:GridView ID="gvdata" runat="server" AutoGenerateColumns="false"
+             AllowPaging="true" PageSize="5"  OnPageIndexChanging="gvdata_PageIndexChanging" DataKeyNames="uid"  OnRowCancelingEdit="gvdata_RowCancelingEdit" OnRowEditing="gvdata_RowEditing" OnRowUpdating="gvdata_RowUpdating1" OnRowDeleting="gvdata_RowDeleting" >
+             <Columns>
+                 <asp:TemplateField HeaderText="Username">
+                   <ItemTemplate>
+                       <asp:Label ID="lblu1name" runat="server" Text='<%#Bind("Username") %>'></asp:Label>
+                   </ItemTemplate>
+                     <EditItemTemplate>
+                         <asp:TextBox ID="txtu1name" runat="server" Text='<%#Bind("Username") %>'></asp:TextBox>
+                     </EditItemTemplate>
+                  </asp:TemplateField>
+                 <asp:TemplateField HeaderText="Password">
+                     <ItemTemplate>
+                         <asp:Label ID="lblpwd" runat="server" Text='<%#Bind("Password") %>'></asp:Label>
+                     </ItemTemplate>
+                     <EditItemTemplate>
+                         <asp:TextBox ID="txtpwd" runat="server" Text='<%#Bind("Password") %>'></asp:TextBox> 
+                     </EditItemTemplate>
+                 </asp:TemplateField>
+                 <asp:TemplateField HeaderText="Actions">
+                     <ItemTemplate>
+                         <asp:Button ID="btnedit" runat="server" Text="Edit" CommandName="Edit" />
+                         <asp:Button ID="btndelete1" runat="server" Text="Delete" CommandName="Delete"/>
+                      </ItemTemplate>
+                     <EditItemTemplate>
+                         <asp:Button ID="btnupdate1" runat="server" Text="Update" CommandName="Update" />
+                         <asp:Button ID="btncancel" runat="server" Text="Cancle" CommandName="Cancel" />
+                     </EditItemTemplate>
+                 </asp:TemplateField>
+             </Columns>
+         </asp:GridView>
      </td>
  </tr>
             </table>

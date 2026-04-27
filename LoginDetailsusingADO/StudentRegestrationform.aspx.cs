@@ -13,11 +13,15 @@ namespace LoginDetailsusingADO
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            binddata(); 
         }
 
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
+            if (!Page.IsValid)
+                return;
+
+
             string gender = "";
             if (rbfemale.Checked)
                 gender = "Female";
@@ -74,25 +78,19 @@ namespace LoginDetailsusingADO
 
         protected void cvgender_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            if (rbfemale.Checked || rbmale.Checked || rbothers.Checked)
-            {
-                cvgender.IsValid = true;
-            }
-            else
-            {
-                cvgender.IsValid = false;
-            }
+                args.IsValid = rbfemale.Checked || rbmale.Checked || rbothers.Checked;
+           
         }
 
         protected void cvcourse_ServerValidate(object source, ServerValidateEventArgs args)
         {
             if(chkADO.Checked||chkangular.Checked||chkcore.Checked||chkcshorp.Checked||chkmvc.Checked)
             {
-                cvcourse.IsValid= true;
+                args.IsValid= true;
             }
             else
             {
-                cvcourse.IsValid= false;
+                args.IsValid= false;
             }
         }
 
