@@ -16,7 +16,7 @@
                     </td>
                     <td>
                         <asp:TextBox ID="txtfname" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvfname" runat="server" ControlToValidate="txtfname" ErrorMessage="Please enter Firstname" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <%--<asp:RequiredFieldValidator ID="rfvfname" runat="server" ControlToValidate="txtfname" ErrorMessage="Please enter Firstname" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                     </td>
                 </tr>
                 <tr>
@@ -25,7 +25,7 @@
                     </td>
                     <td>
                            <asp:TextBox ID="txtlname" runat="server"></asp:TextBox>
-                           <asp:RequiredFieldValidator ID="rfvlname" runat="server" ControlToValidate="txtlname" ErrorMessage="Please enter Lastname" ForeColor="Red"></asp:RequiredFieldValidator>
+                           <%--<asp:RequiredFieldValidator ID="rfvlname" runat="server" ControlToValidate="txtlname" ErrorMessage="Please enter Lastname" ForeColor="Red"></asp:RequiredFieldValidator>--%>
 
                     </td>
                      </tr>
@@ -37,7 +37,7 @@
                         <asp:RadioButton ID="rbfemale" runat="server" Text="Female" GroupName="gender"  />
                         <asp:RadioButton ID="rbmale" runat="server" Text="Male" GroupName="gender" />
                         <asp:RadioButton ID="rbothers" runat="server" Text="Others" GroupName="gender"  />
-                        <asp:CustomValidator ID="cvgender" runat="server"   Display="Dynamic"  ValidateEmptyText="true" ErrorMessage="Please Select Your Gender" ForeColor="Red" OnServerValidate="cvgender_ServerValidate"></asp:CustomValidator>
+                        <%--<asp:CustomValidator ID="cvgender" runat="server"   Display="Dynamic"  ValidateEmptyText="true" ErrorMessage="Please Select Your Gender" ForeColor="Red" OnServerValidate="cvgender_ServerValidate"></asp:CustomValidator>--%>
                     </td>
                 </tr>
                 <tr>
@@ -50,7 +50,7 @@
                         <asp:CheckBox ID="chkmvc" runat="server" Text="MVC" AutoPostBack="true"/>
                         <asp:CheckBox ID="chkcore" runat="server" Text="DotNetCore" AutoPostBack="true"/>
                         <asp:CheckBox ID="chkangular" runat="server" Text="Angular" AutoPostBack="true"/>
-                        <asp:CustomValidator ID="cvcourse" runat="server" ValidateEmptyText="true" ErrorMessage="Please Select Your Courses" ForeColor="Red" OnServerValidate="cvcourse_ServerValidate"></asp:CustomValidator>
+                        <%--<asp:CustomValidator ID="cvcourse" runat="server" ValidateEmptyText="true" ErrorMessage="Please Select Your Courses" ForeColor="Red" OnServerValidate="cvcourse_ServerValidate"></asp:CustomValidator>--%>
                     </td>
                 </tr>
                 <tr>
@@ -66,7 +66,7 @@
                             <asp:ListItem>1998-1-24</asp:ListItem>
                             <asp:ListItem>1999-6-22</asp:ListItem>
                     </asp:DropDownList>  
-                        <asp:RequiredFieldValidator ID="rfvdob" runat="server" ErrorMessage="Please select your Date of Birth" ControlToValidate="ddldob" ForeColor="Red" InitialValue="--select--"></asp:RequiredFieldValidator>
+                        <%--<asp:RequiredFieldValidator ID="rfvdob" runat="server" ErrorMessage="Please select your Date of Birth" ControlToValidate="ddldob" ForeColor="Red" InitialValue="--select--"></asp:RequiredFieldValidator>--%>
                     </td>
                 </tr>
                 <tr>
@@ -75,9 +75,10 @@
                     </td>
                     <td>
                         <asp:TextBox ID="txtemail" runat="server" ></asp:TextBox>
-                         <asp:RequiredFieldValidator ID="rvfemail" runat="server" ControlToValidate="txtemail" ErrorMessage="Please enter email" ForeColor="Red"></asp:RequiredFieldValidator>
+                       <%--  <asp:RequiredFieldValidator ID="rvfemail" runat="server" ControlToValidate="txtemail" ErrorMessage="Please enter email" ForeColor="Red"></asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator ID="revemail" runat="server" ControlToValidate="txtemail" ErrorMessage="Email should be follow email expression" ForeColor="Red" ValidationExpression="^[A-Za-z0-9]+@[A-Za-z0-9]+\.[a-z]{2,}$"></asp:RegularExpressionValidator>
-                    </td>
+                  --%>
+                        </td>
                 </tr>
                 <tr>
                     <td>
@@ -85,7 +86,7 @@
                     </td>
                     <td>
                         <asp:TextBox ID="txtpw" runat="server" TextMode="Password"></asp:TextBox>
-                         <asp:RequiredFieldValidator ID="rfvpw" runat="server" ControlToValidate="txtpw" ErrorMessage="Please enter Password" ForeColor="Red"></asp:RequiredFieldValidator>
+                         <%--<asp:RequiredFieldValidator ID="rfvpw" runat="server" ControlToValidate="txtpw" ErrorMessage="Please enter Password" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                     </td>
                 </tr>
                 <tr>
@@ -94,9 +95,10 @@
                     </td>
                     <td>
                         <asp:TextBox ID="txtcpw" runat="server"></asp:TextBox>
-                         <asp:RequiredFieldValidator ID="rfvcpw" runat="server" ControlToValidate="txtcpw" ErrorMessage="Please enter Confirm Password" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <%-- <asp:RequiredFieldValidator ID="rfvcpw" runat="server" ControlToValidate="txtcpw" ErrorMessage="Please enter Confirm Password" ForeColor="Red"></asp:RequiredFieldValidator>
                         <asp:CompareValidator ID="cvcpw" runat="server" ControlToValidate="txtcpw" ControlToCompare="txtpw" ErrorMessage="Confirm password should match with password" ForeColor="Red"></asp:CompareValidator>
-                    </td>
+                   --%>
+                        </td>
                 </tr>
                 <tr>
                     <td>
@@ -104,9 +106,10 @@
                     </td>
                     <td>
                         <asp:TextBox Id="txtpno" runat="server"></asp:TextBox>
-                             <asp:RequiredFieldValidator ID="rfvpno" runat="server" ControlToValidate="txtpno" ErrorMessage="Please enter Ph no" ForeColor="Red"></asp:RequiredFieldValidator>
+                           <%--  <asp:RequiredFieldValidator ID="rfvpno" runat="server" ControlToValidate="txtpno" ErrorMessage="Please enter Ph no" ForeColor="Red"></asp:RequiredFieldValidator>
                              <asp:RegularExpressionValidator ID="revpno" runat="server" ControlToValidate="txtpno" ErrorMessage="Ph no should contain 10 digits" ForeColor="Red" ValidationExpression="^\d{10}$"></asp:RegularExpressionValidator>
-                    </td>
+                  --%>
+                        </td>
                 </tr>
                 <tr>
                     <td>
@@ -129,7 +132,73 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:GridView ID="gvdata" runat="server"></asp:GridView>
+                       <asp:GridView ID="gvdata" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="5" 
+                           OnPageIndexChanging="gvdata_PageIndexChanging" OnRowEditing="gvdata_RowEditing"
+                           OnRowCancelingEdit="gvdata_RowCancelingEdit" OnRowDeleting="gvdata_RowDeleting"
+                           OnRowUpdating="gvdata_RowUpdating" DataKeyNames="sid">
+                          <Columns>
+                              <asp:TemplateField HeaderText="FirstName">
+                                  <ItemTemplate>
+                                      <asp:Label ID="lblgvfname" runat="server" Text='<%#Bind("fname") %>'></asp:Label>
+                                  </ItemTemplate>
+                                  <EditItemTemplate>
+                                      <asp:TextBox ID="txtgvfname" runat="server" Text='<%#Bind("fname") %>'></asp:TextBox>
+                                  </EditItemTemplate>
+                              </asp:TemplateField>
+                              <asp:TemplateField HeaderText="LastName">
+                                  <ItemTemplate>
+                                      <asp:Label ID="lblgvlname" runat="server" Text='<%#Bind("lname") %>'></asp:Label>
+                                  </ItemTemplate>
+                                  <EditItemTemplate>
+                                      <asp:TextBox  ID="txtgvlname" runat="server" Text='<%#Bind("lname") %>'></asp:TextBox>
+                                  </EditItemTemplate>
+                              </asp:TemplateField>
+                              <asp:TemplateField HeaderText="Gender">
+                                  <ItemTemplate>
+                                      <asp:Label ID="llblgvgender" runat="server" Text='<%#Bind("gender") %>'></asp:Label>
+                                  </ItemTemplate>
+                                  <EditItemTemplate>
+                                     <asp:TextBox ID="txtgvgender" runat="server" Text='<%#Bind("gender") %>'></asp:TextBox>
+                                   </EditItemTemplate>
+                              </asp:TemplateField>
+                              <asp:TemplateField HeaderText="Course">
+                                  <ItemTemplate>
+                                      <asp:Label ID="lblgvcourse" runat="server" Text='<%#Bind("course") %>'></asp:Label>
+                                  </ItemTemplate>
+                                  <EditItemTemplate>
+                                      <asp:TextBox ID="txtgvcourse" runat="server" Text='<%#Bind("course") %>'></asp:TextBox>
+                                  </EditItemTemplate>
+                              </asp:TemplateField>
+                              <asp:TemplateField HeaderText="EmailID">
+                                  <ItemTemplate>
+                                      <asp:Label ID="lblgvemail" runat="server" Text='<%#Bind("emailid") %>'></asp:Label>
+                                  </ItemTemplate>
+                                  <EditItemTemplate>
+                                      <asp:TextBox ID="txtgvemail" runat="server" Text='<%#Bind("emailid") %>'></asp:TextBox>
+                                  </EditItemTemplate>
+                              </asp:TemplateField>
+                              <asp:TemplateField HeaderText="MobileNo">
+                                  <ItemTemplate>
+                                      <asp:Label ID="lblgvphno" runat="server" Text='<%#Bind("phno") %>'></asp:Label>
+                                  </ItemTemplate>
+                                  <EditItemTemplate>
+                                      <asp:TextBox ID="txtgvphno" runat="server" Text='<%#Bind("phno") %>'></asp:TextBox>
+                                  </EditItemTemplate>
+                              </asp:TemplateField>
+
+
+                             <asp:TemplateField HeaderText="Actions">
+                                  <ItemTemplate>
+                                      <asp:Button ID="gvbtnedit" runat="server" Text="Edit" CommandName="Edit" />
+                                      <asp:Button ID="gcbtndelete" runat="server" Text="Delete" CommandName="Delete" />
+                                  </ItemTemplate>
+                                  <EditItemTemplate>
+                                      <asp:Button ID="gvbtnupdate" runat="server" Text="Update" CommandName="Update" />
+                                      <asp:Button ID="gvbtncancel" runat="server" Text="Cancel" CommandName="Cancel" />
+                                  </EditItemTemplate>
+                              </asp:TemplateField>
+                          </Columns>
+                       </asp:GridView>
                     </td>
                 </tr>
             </table>

@@ -42,15 +42,6 @@ namespace LoginDetailsusingADO
         protected global::System.Web.UI.WebControls.TextBox txtfname;
 
         /// <summary>
-        /// rfvfname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvfname;
-
-        /// <summary>
         /// lbllname control.
         /// </summary>
         /// <remarks>
@@ -67,15 +58,6 @@ namespace LoginDetailsusingADO
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtlname;
-
-        /// <summary>
-        /// rfvlname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvlname;
 
         /// <summary>
         /// lblgender control.
@@ -112,15 +94,6 @@ namespace LoginDetailsusingADO
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton rbothers;
-
-        /// <summary>
-        /// cvgender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator cvgender;
 
         /// <summary>
         /// lblCourse control.
@@ -177,15 +150,6 @@ namespace LoginDetailsusingADO
         protected global::System.Web.UI.WebControls.CheckBox chkangular;
 
         /// <summary>
-        /// cvcourse control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator cvcourse;
-
-        /// <summary>
         /// lbldob control.
         /// </summary>
         /// <remarks>
@@ -202,15 +166,6 @@ namespace LoginDetailsusingADO
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddldob;
-
-        /// <summary>
-        /// rfvdob control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvdob;
 
         /// <summary>
         /// lblemail control.
@@ -231,24 +186,6 @@ namespace LoginDetailsusingADO
         protected global::System.Web.UI.WebControls.TextBox txtemail;
 
         /// <summary>
-        /// rvfemail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rvfemail;
-
-        /// <summary>
-        /// revemail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revemail;
-
-        /// <summary>
         /// lblpw control.
         /// </summary>
         /// <remarks>
@@ -265,15 +202,6 @@ namespace LoginDetailsusingADO
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtpw;
-
-        /// <summary>
-        /// rfvpw control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvpw;
 
         /// <summary>
         /// lblcpw control.
@@ -294,24 +222,6 @@ namespace LoginDetailsusingADO
         protected global::System.Web.UI.WebControls.TextBox txtcpw;
 
         /// <summary>
-        /// rfvcpw control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcpw;
-
-        /// <summary>
-        /// cvcpw control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator cvcpw;
-
-        /// <summary>
         /// lblpno control.
         /// </summary>
         /// <remarks>
@@ -328,24 +238,6 @@ namespace LoginDetailsusingADO
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtpno;
-
-        /// <summary>
-        /// rfvpno control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvpno;
-
-        /// <summary>
-        /// revpno control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revpno;
 
         /// <summary>
         /// btnsubmit control.

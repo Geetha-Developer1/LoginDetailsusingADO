@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace LoginDetailsusingADO
 {
@@ -12,7 +13,7 @@ namespace LoginDetailsusingADO
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            gridbind();
         }
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
@@ -22,6 +23,16 @@ namespace LoginDetailsusingADO
             cmd.ExecuteNonQuery();
             Response.Write("Record Inserted Successfully");
             con.Close();
+            gridbind();
+        }
+        protected void gridbind()
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UA0O1ET\\SQLEXPRESS;Initial Catalog=ADODotNetDB;Integrated Security=true;");
+            SqlDataAdapter da = new SqlDataAdapter("Select * from regestration", con);
+            DataSet ds= new DataSet();
+            da.Fill(ds);
+            //gvdata.DataSource = ds;
+            //gvdata.DataBind();
         }
     }
 }
