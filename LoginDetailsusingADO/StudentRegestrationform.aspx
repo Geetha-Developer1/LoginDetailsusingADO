@@ -158,7 +158,10 @@
                                       <asp:Label ID="llblgvgender" runat="server" Text='<%#Bind("gender") %>'></asp:Label>
                                   </ItemTemplate>
                                   <EditItemTemplate>
-                                     <asp:TextBox ID="txtgvgender" runat="server" Text='<%#Bind("gender") %>'></asp:TextBox>
+                                   <%--  <asp:TextBox ID="txtgvgender" runat="server" Text='<%#Bind("gender") %>'></asp:TextBox>--%>
+                                      <asp:RadioButton ID="gvrbfemale" runat="server" Text="Female" GroupName="gender" Checked='<%#Eval("gender").ToString()=="Female" %>' />
+                                       <asp:RadioButton ID="gvrbmale" runat="server" Text="Male" GroupName="gender" Checked='<%#Eval("gender").ToString()=="Male" %>'/>
+                                       <asp:RadioButton ID="gvrbothers" runat="server" Text="Others" GroupName="gender" Checked='<%#Eval("gender").ToString()=="Others" %>' />
                                    </EditItemTemplate>
                               </asp:TemplateField>
                               <asp:TemplateField HeaderText="Course">

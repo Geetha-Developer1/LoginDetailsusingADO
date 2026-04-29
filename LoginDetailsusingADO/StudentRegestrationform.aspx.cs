@@ -142,9 +142,21 @@ namespace LoginDetailsusingADO
             con.Open();
             GridViewRow gvr = gvdata.Rows[e.RowIndex];
             int sid = Convert.ToInt32(gvdata.DataKeys[e.RowIndex].Value);
+
+            RadioButton female = (RadioButton)gvr.FindControl("gvrbfemale");
+            RadioButton male = (RadioButton)gvr.FindControl("gvrbmale");
+            RadioButton others = (RadioButton)gvr.FindControl("gvrbothers");
+            string gender = "";
+            if (female.Checked)
+                gender = "Female";
+            else if (male.Checked)
+                gender = "Male";
+            else if (others.Checked)
+                gender = "Others";
+
             string fname = ((TextBox)gvr.FindControl("txtgvfname")).Text;
             string lname = ((TextBox)gvr.FindControl("txtgvlname")).Text;
-            string gender = ((TextBox)gvr.FindControl("txtgvgender")).Text;
+            //string gender = ((TextBox)gvr.FindControl("txtgvgender")).Text;
             string course = ((TextBox)gvr.FindControl("txtgvcourse")).Text;
             string emailid = ((TextBox)gvr.FindControl("txtgvemail")).Text;
             string phno = ((TextBox)gvr.FindControl("txtgvphno")).Text;
